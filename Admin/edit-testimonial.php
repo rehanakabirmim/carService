@@ -107,7 +107,7 @@ if ($_SESSION['role'] == '1') {
           </div>
 
   <?php
-        get_footer();
+      get_footer();
       }else{
         header('Location:index.php');
       }

@@ -22,9 +22,9 @@ if(!empty($_POST)){
  if(!empty($name)){
       if(mysqli_query($con,$insert)){
         move_uploaded_file($image['tmp_name'],'uploads/'.$imageName);
-        echo "client picture upload success.";
+        echo "Client Information recorded.";
       }else{
-        echo "client picture upload failed.";
+        echo "Client Information recorded failed.";
       }
     }else{
       echo "Please enter client name";
