@@ -36,6 +36,7 @@
                         <?php } ?>
                         <li><a href="all-team.php"><i class="fas fa-user-circle"></i>Team</a></li>
                         <li><a href="all-booking.php"><i class="fas fa-globe"></i>Booking Service</a></li>
+                        <li><a href="all-testimonial.php"><i class="fas fa-user-circle"></i>Testimonial</a></li>
                         <li><a href="all-message.php"><i class="fas fa-comments"></i> Contact Message</a></li>
                         <li><a href="#"><i class="fas fa-globe"></i> Live Site</a></li>
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>

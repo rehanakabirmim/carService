@@ -117,9 +117,10 @@ if (!empty($_POST)) {
         <div class="card-footer text-center">
           <button type="submit" class="btn btn-sm btn-dark">UPDATE</button>
         </div>
-        <?php
+
+    <?php
         get_footer();
       }else{
         header('Location:index.php');
       }
-        ?>
+    ?>
