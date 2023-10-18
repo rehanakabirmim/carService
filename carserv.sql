@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2023 at 06:44 PM
+-- Generation Time: Oct 18, 2023 at 10:09 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,16 +33,18 @@ CREATE TABLE `banners` (
   `ban_subtitle` varchar(250) NOT NULL,
   `ban_button` varchar(50) NOT NULL,
   `ban_url` varchar(50) NOT NULL,
-  `ban_image` varchar(50) NOT NULL
+  `ban_image` varchar(50) NOT NULL,
+  `ban_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `banners`
 --
 
-INSERT INTO `banners` (`ban_id`, `ban_title`, `ban_subtitle`, `ban_button`, `ban_url`, `ban_image`) VALUES
-(2, 'Ut veniam voluptas ', 'Assumenda labore lab', 'Veniam culpa aperi', 'Iure et rerum est o', ''),
-(3, 'Ut veniam voluptas ', 'Assumenda labore lab', 'Veniam culpa aperi', 'Iure et rerum est o', '');
+INSERT INTO `banners` (`ban_id`, `ban_title`, `ban_subtitle`, `ban_button`, `ban_url`, `ban_image`, `ban_status`) VALUES
+(8, 'At officia magni ali', 'Laborum Enim incidu', 'Aliqua Tempora beat', 'Rem nesciunt non et', 'banner_1697531603_240836.jpg', 0),
+(9, 'Necessitatibus in la', 'Dolores sit nulla re', 'Deserunt officia dol', 'Ea consequatur volu', 'banner_1697531641_720849.jpg', 1),
+(10, 'adfasf', 'adfasdfas', 'sfasfasf', 'afdsafasdfa', 'banner_1697535473_168723.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -54,7 +56,7 @@ CREATE TABLE `booking` (
   `book_id` int(11) NOT NULL,
   `book_name` varchar(30) NOT NULL,
   `book_email` varchar(50) NOT NULL,
-  `book_sel_ser` varchar(20) NOT NULL,
+  `book_ser_name` varchar(20) NOT NULL,
   `book_ser_date` date NOT NULL,
   `book_req` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -117,6 +119,16 @@ CREATE TABLE `services` (
   `service_photo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`service_id`, `service_title`, `service_details`, `service_button`, `service_url`, `service_photo`) VALUES
+(3, 'Fugiat et rerum vel ', 'Earum eveniet repud', 'Quis id tempore und', 'Quis iusto delectus', ''),
+(4, 'Eos laborum quos ul', 'Magni tempor pariatu', 'A sed beatae qui asp', 'Aliquam id ad accus', 'service_1697450961_130888.jpg'),
+(5, 'Nesciunt voluptatib', 'Cupiditate et sed ne', 'Eum quis similique p', 'Ut aliquip voluptate', 'service_1697537573_209472.jpg'),
+(6, 'Voluptatem non tenet', 'Irure quaerat dolor ', 'Vero deserunt adipis', 'Reiciendis beatae sa', 'service_1697537593_730733.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -138,7 +150,9 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`member_id`, `member_name`, `member_designation`, `member_facebook`, `member_twitter`, `member_instragram`, `member_photo`) VALUES
-(6, 'Brian Osborne', ' Maiores rerum aut fu', 'Maxime ut dolore nis', ' Sit sed vel tempor ', 'Qui non consequr', '');
+(7, 'Shaine Cox', 'Exercitation itaque ', 'In anim ipsum eu eve', ' Qui provident venia', 'Esse non eligendi p', 'team_1697538847_713742.jpg'),
+(8, 'Octavius Levy', 'Necessitatibus sint ', 'Occaecat consequatur', ' Dolor unde ut fugit', 'Molestias tenetur qu', 'team_1697538861_300088.jpg'),
+(9, 'Jolie Wood', ' Dolores aliquip dese', 'fab fa-facebook-f', ' fab fa-twitter', 'fab fa-instagram', 'team_1697538872_759676.jpg');
 
 -- --------------------------------------------------------
 
@@ -153,6 +167,16 @@ CREATE TABLE `testimonial` (
   `client_details` varchar(100) NOT NULL,
   `client_photo` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `testimonial`
+--
+
+INSERT INTO `testimonial` (`client_id`, `client_name`, `client_prof`, `client_details`, `client_photo`) VALUES
+(5, 'Ferris Miller', 'Id suscipit tempore', 'Exercitationem ipsam', ''),
+(6, 'Illiana Fisher', 'Fugiat quia quas sed', 'Consequat Obcaecati', ''),
+(8, 'Rehana Kabir Mim', 'Praesentium aut ut i', 'Sunt corrupti aut u', 'testimonial_1697366215_394457.jpg'),
+(9, 'Rahim Odonnell', 'Sint dolor reprehen', 'Amet suscipit sequi', '');
 
 -- --------------------------------------------------------
 
@@ -177,10 +201,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_phone`, `user_email`, `user_username`, `user_password`, `role_id`, `user_photo`, `user_slug`) VALUES
-(1, ' Rehana Kabir Mim', '017193584967', 'rehanakabirmim@gmail.com', 'mim', 'c20ad4d76fe97759aa27a0c99bff6710', 1, 'user_1695700143_640640.jpg', 'U651a342c48094'),
-(2, 'marwa', '01680650424', 'marwa@gmail.com', 'nurtaj', '202cb962ac59075b964b07152d234b70', 2, 'user_1695711796_569487.jpg', 'U651a35ed81e1f'),
-(3, ' ayesha', '01680650425', 'info.yourcartbd@gmail.com', 'ayesha', 'c20ad4d76fe97759aa27a0c99bff6710', 3, 'user_1695711850_212050.jpg', 'U651a3603a0ee7'),
-(4, ' sami', '01680650422', 'samia@gmail.com', 'kakon', '6512bd43d9caa6e02c990b0a82652dca', 5, '', '  U651a364b98d12');
+(7, 'Rehana Kabir Mim', '01680650424', 'rehanakabirmim@gmail.com', 'mim', 'c20ad4d76fe97759aa27a0c99bff6710', 1, '', '  U652bbe92b1555');
 
 --
 -- Indexes for dumped tables
@@ -245,13 +266,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `ban_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ban_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -269,25 +290,25 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `testimonial`
 --
 ALTER TABLE `testimonial`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
