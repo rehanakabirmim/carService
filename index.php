@@ -166,21 +166,25 @@ get_header();
 <div class="container-fluid fact bg-dark my-5 py-5">
     <div class="container">
         <div class="row g-4">
+
             <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
                 <i class="fa fa-check fa-2x text-white mb-3"></i>
                 <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
                 <p class="text-white mb-0">Years Experience</p>
             </div>
+            
             <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
                 <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
                 <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
                 <p class="text-white mb-0">Expert Technicians</p>
             </div>
+
             <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
                 <i class="fa fa-users fa-2x text-white mb-3"></i>
                 <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
                 <p class="text-white mb-0">Satisfied Clients</p>
             </div>
+            
             <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
                 <i class="fa fa-car fa-2x text-white mb-3"></i>
                 <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
@@ -202,56 +206,79 @@ get_header();
         <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-lg-4">
                 <div class="nav w-100 nav-pills me-4">
+                 
+                <?php
 
-                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
-                        data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                    $select_qurry = "SELECT * FROM `services`";
+
+                    $allService = mysqli_query($con, $select_qurry);
+                    
+                    while ($services = mysqli_fetch_assoc($allService)) {
+                       
+                        ?>
+
+                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 <?= ($services['service_id'] == 1)? 'active' : '' ?>"
+                        data-bs-toggle="pill" data-bs-target="#tab-pane-<?= $services['service_id']?>" type="button">
                         <i class="fa fa-car-side fa-2x me-3"></i>
-                        <h4 class="m-0">Diagnostic Test</h4>
+                        <h4 class="m-0"><?= $services['service_title']?></h4>
                     </button>
-                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill"
-                        data-bs-target="#tab-pane-2" type="button">
-                        <i class="fa fa-car fa-2x me-3"></i>
-                        <h4 class="m-0">Engine Servicing</h4>
-                    </button>
-                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill"
-                        data-bs-target="#tab-pane-3" type="button">
-                        <i class="fa fa-cog fa-2x me-3"></i>
-                        <h4 class="m-0">Tires Replacement</h4>
-                    </button>
-                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill"
-                        data-bs-target="#tab-pane-4" type="button">
-                        <i class="fa fa-oil-can fa-2x me-3"></i>
-                        <h4 class="m-0">Oil Changing</h4>
-                    </button>
+
+                    <?php
+                    }
+                ?>
+
+                  
+                  
+                    
                 </div>
             </div>
+
             <div class="col-lg-8">
-                <div class="tab-content w-100">
+                 
+  
 
-                    <div class="tab-pane fade show active" id="tab-pane-1">
-                        <div class="row g-4">
-                            <div class="col-md-6" style="min-height: 350px;">
+                    <div class="tab-content w-100">
 
-                                <div class="position-relative h-100">
-                                    <img class="position-absolute img-fluid w-100 h-100" src="img/service-1.jpg"
-                                        style="object-fit: cover;" alt="">
+                    <?php
+
+                        $select_qurry = "SELECT * FROM `services`";
+
+                        $allService = mysqli_query($con, $select_qurry);
+
+                        while ($services = mysqli_fetch_assoc($allService)) {
+                            
+                        ?>
+
+                        <div class="tab-pane fade show <?= ($services['service_id'] == 1)? 'active' : '' ?>" id="tab-pane-<?= $services['service_id']?>">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="admin/uploads/<?= $services['service_photo']?>"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="mb-3"><?= $services['service_title']?></h3>
+                                    <p class="mb-4"><?= $services['service_details']?></p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                    <a href="<?= $services['service_url']?>" class="btn btn-primary py-3 px-5 mt-3"><?= $services['service_button']?><i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <h3 class="mb-3"></h3>
-                                <p class="mb-4"></p>
-                                <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
-                                <a href=" " class="btn btn-primary py-3 px-5 mt-3"><i
-                                        class="fa fa-arrow-right ms-3"></i></a>
-                            </div>
                         </div>
+
+
+
+                        <?php
+                        }
+                        ?>
+
+                       
+                       
+                        
                     </div>
-
-
                 </div>
-            </div>
         </div>
     </div>
 </div>
@@ -318,84 +345,83 @@ get_header();
 
 <!-- Team Start -->
 <div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="text-primary text-uppercase">// Our Technicians //</h6>
-            <h1 class="mb-5">Our Expert Technicians</h1>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item">
-                    <div class="position-relative overflow-hidden">
-                        <?php
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-primary text-uppercase">// Our Technicians //</h6>
+                <h1 class="mb-5">Our Expert Technicians</h1>
+            </div>
+            <div class="row g-4">
 
-                        $select = "SELECT * FROM team";
+            <?php
 
-                        $data = mysqli_query($con, $select);
+            $select_qurry = "SELECT * FROM `team`";
 
-                        // $data = mysqli_fetch_assoc($datas);
-                        
-                        while ($team = mysqli_fetch_assoc($data)) {
-                            
-                        
-                            ?>
-                            <img class="img-fluid" src="admin/uploads/<?= $team['member_photo']; ?>" alt="">
+            $allTeam = mysqli_query($con, $select_qurry);
+
+            while ($team = mysqli_fetch_assoc($allTeam)) {
+                
+            ?>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="admin/uploads/<?=$team['member_photo']?>" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
-                                <a class="btn btn-square mx-1" href=""><i class="<?= $team['member_facebook'] ?>"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="<?= $team['member_twitter'] ?>"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="<?= $team['member_instragram'] ?>"></i></a>
+                                <a class="btn btn-square mx-1" href="<?=$team['member_facebook']?>"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square mx-1" href="<?=$team['member_twitter']?>"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href="<?=$team['member_instragram']?>"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
-
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">
-                                <?= $team['member_name']; ?>
-                            </h5>
-                            <small>
-                                <?= $team['member_designation']; ?>
-                            </small>
+                            <h5 class="fw-bold mb-0"><?=$team['member_name']?></h5>
+                            <small><?=$team['member_designation']?></small>
                         </div>
-                    <?php } ?>
+                    </div>
                 </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Team End -->
-
-
-<!-- Testimonial Start -->
-<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="text-center">
-            <h6 class="text-primary text-uppercase">// Testimonial //</h6>
-            <h1 class="mb-5">Our Clients Say!</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel position-relative">
-            <div class="testimonial-item text-center">
-
-                <?php 
-                $select = "SELECT * FROM testimonial";
-                $data = mysqli_query($con, $select);
-                while ($test = mysqli_fetch_assoc($data)) {
-
-
+              <?php
+                }
                 ?>
-                <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="admin/uploads/<?= $test['client_photo']; ?>"
-                    style="width: 80px; height: 80px;">
-                <h5 class="mb-0"><?= $test['client_name']; ?></h5>
-                <p><?= $test['client_prof']; ?></p>
-                <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><?= $test['client_details']; ?></p>
-                </div>
+
             </div>
-           <?php } ?>
         </div>
     </div>
-</div>
-<!-- Testimonial End -->
+    <!-- Team End -->
 
+
+ <!-- Testimonial Start -->
+ <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-primary text-uppercase">// Testimonial //</h6>
+                <h1 class="mb-5">Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                
+            <?php
+
+            $select_qurry = "SELECT * FROM `testimonial`";
+
+            $allTestimonial = mysqli_query($con, $select_qurry);
+
+            while ($testimonial = mysqli_fetch_assoc($allTestimonial)) {
+                
+            ?>
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="admin/uploads/<?= $testimonial['client_photo']?>" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0"><?= $testimonial['client_name']?></h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0"><?= $testimonial['client_details']?></p>
+                    </div>
+                </div>
+
+               <?php 
+            }
+               ?>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
 <?php
 get_footer();

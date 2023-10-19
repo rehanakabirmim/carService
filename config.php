@@ -1,5 +1,5 @@
 <?php
-$db_name="carserv";
+$db_name="car_service";
 $db_user="root";
 $db_pass="";
 $db_host= "localhost";
