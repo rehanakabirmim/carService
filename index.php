@@ -15,7 +15,7 @@ get_header();
             $Qb = mysqli_query($con, $selb);
             while ($banner = mysqli_fetch_assoc($Qb)) {
 
-                ?>
+            ?>
 
                 <div class="carousel-item <?= ($banner['ban_status'] == 1) ? 'active' : ''; ?>">
                     <img class="w-100" src="admin/uploads/<?= $banner['ban_image']; ?>" alt="Image">
@@ -29,8 +29,7 @@ get_header();
                                     <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">
                                         <?= $banner['ban_subtitle']; ?>
                                     </h1>
-                                    <a href="<?= $banner['ban_url']; ?>"
-                                        class="btn btn-primary py-3 px-5 animated slideInDown">
+                                    <a href="<?= $banner['ban_url']; ?>" class="btn btn-primary py-3 px-5 animated slideInDown">
                                         <?= $banner['ban_button']; ?><i class="fa fa-arrow-right ms-3"></i>
                                     </a>
                                 </div>
@@ -102,25 +101,22 @@ get_header();
         <div class="row g-5">
             <div class="col-lg-6 pt-4" style="min-height: 400px;">
                 <div class="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;"
-                        alt="">
-                    <div class="position-absolute top-0 end-0 mt-n4 me-n4 py-4 px-5"
-                        style="background: rgba(0, 0, 0, .08);">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
+                    <div class="position-absolute top-0 end-0 mt-n4 me-n4 py-4 px-5" style="background: rgba(0, 0, 0, .08);">
                         <h1 class="display-4 text-white mb-0">15 <span class="fs-4">Years</span></h1>
                         <h4 class="text-white">Experience</h4>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <h6 class="text-primary text-uppercase">// About Us //</h6>
+                <h6 class="text-primary text-uppercase"> About Us </h6>
                 <h1 class="mb-4"><span class="text-primary">CarServ</span> Is The Best Place For Your Auto Care</h1>
                 <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
                     eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                 <div class="row g-4 mb-3 pb-3">
                     <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                         <div class="d-flex">
-                            <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1"
-                                style="width: 45px; height: 45px;">
+                            <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
                                 <span class="fw-bold text-secondary">01</span>
                             </div>
                             <div class="ps-3">
@@ -131,8 +127,7 @@ get_header();
                     </div>
                     <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
                         <div class="d-flex">
-                            <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1"
-                                style="width: 45px; height: 45px;">
+                            <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
                                 <span class="fw-bold text-secondary">02</span>
                             </div>
                             <div class="ps-3">
@@ -143,8 +138,7 @@ get_header();
                     </div>
                     <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
                         <div class="d-flex">
-                            <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1"
-                                style="width: 45px; height: 45px;">
+                            <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
                                 <span class="fw-bold text-secondary">03</span>
                             </div>
                             <div class="ps-3">
@@ -172,7 +166,7 @@ get_header();
                 <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
                 <p class="text-white mb-0">Years Experience</p>
             </div>
-            
+
             <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
                 <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
                 <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
@@ -184,7 +178,7 @@ get_header();
                 <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
                 <p class="text-white mb-0">Satisfied Clients</p>
             </div>
-            
+
             <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
                 <i class="fa fa-car fa-2x text-white mb-3"></i>
                 <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
@@ -200,85 +194,83 @@ get_header();
 <div class="container-xxl service py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="text-primary text-uppercase">// Our Services //</h6>
+            <h6 class="text-primary text-uppercase"> Our Services </h6>
             <h1 class="mb-5">Explore Our Services</h1>
         </div>
         <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-lg-4">
                 <div class="nav w-100 nav-pills me-4">
-                 
-                <?php
+
+                    <?php
 
                     $select_qurry = "SELECT * FROM `services`";
 
                     $allService = mysqli_query($con, $select_qurry);
-                    
-                    while ($services = mysqli_fetch_assoc($allService)) {
-                       
-                        ?>
 
-                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 <?= ($services['service_id'] == 1)? 'active' : '' ?>"
-                        data-bs-toggle="pill" data-bs-target="#tab-pane-<?= $services['service_id']?>" type="button">
-                        <i class="fa fa-car-side fa-2x me-3"></i>
-                        <h4 class="m-0"><?= $services['service_title']?></h4>
-                    </button>
+                    while ($services = mysqli_fetch_assoc($allService)) {
+
+                    ?>
+
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 <?= ($services['service_id'] == 1) ? 'active' : '' ?>" data-bs-toggle="pill" data-bs-target="#tab-pane-<?= $services['service_id'] ?>" type="button">
+                            <!-- <i class="fa fa-car-side fa-2x me-3"></i> -->
+                            <h4 class="m-0"><?= $services['service_title'] ?></h4>
+                        </button>
 
                     <?php
                     }
-                ?>
+                    ?>
 
-                  
-                  
-                    
+
+
+
                 </div>
             </div>
 
             <div class="col-lg-8">
-                 
-  
 
-                    <div class="tab-content w-100">
+
+
+                <div class="tab-content w-100">
 
                     <?php
 
-                        $select_qurry = "SELECT * FROM `services`";
+                    $select_qurry = "SELECT * FROM `services`";
 
-                        $allService = mysqli_query($con, $select_qurry);
+                    $allService = mysqli_query($con, $select_qurry);
 
-                        while ($services = mysqli_fetch_assoc($allService)) {
-                            
-                        ?>
+                    while ($services = mysqli_fetch_assoc($allService)) {
 
-                        <div class="tab-pane fade show <?= ($services['service_id'] == 1)? 'active' : '' ?>" id="tab-pane-<?= $services['service_id']?>">
+                    ?>
+
+                        <div class="tab-pane fade show <?= ($services['service_id'] == 1) ? 'active' : '' ?>" id="tab-pane-<?= $services['service_id'] ?>">
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="admin/uploads/<?= $services['service_photo']?>"
-                                            style="object-fit: cover;" alt="">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="admin/uploads/<?= $services['service_photo'] ?>" style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3"><?= $services['service_title']?></h3>
-                                    <p class="mb-4"><?= $services['service_details']?></p>
+                                    <h3 class="mb-3"><?= $services['service_title'] ?></h3>
+                                    <p class="mb-4"><?= $services['service_details'] ?></p>
                                     <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
                                     <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
                                     <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
-                                    <a href="<?= $services['service_url']?>" class="btn btn-primary py-3 px-5 mt-3"><?= $services['service_button']?><i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="<?= $services['service_url'] ?>" class="btn btn-primary py-3 px-5 mt-3"><?= $services['service_button'] ?><i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
 
 
 
-                        <?php
-                        }
-                        ?>
+                    <?php
+                    }
+                    ?>
 
-                       
-                       
-                        
-                    </div>
+
+
+
                 </div>
+            </div>
         </div>
     </div>
 </div>
@@ -299,18 +291,15 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn"
-                    data-wow-delay="0.6s">
+                <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
                     <h1 class="text-white mb-4">Book For A Service</h1>
                     <form>
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="Your Name"
-                                    style="height: 55px;">
+                                <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" placeholder="Your Email"
-                                    style="height: 55px;">
+                                <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
                                 <select class="form-select border-0" style="height: 55px;">
@@ -322,9 +311,7 @@ get_header();
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="text" class="form-control border-0 datetimepicker-input"
-                                        placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker"
-                                        style="height: 55px;">
+                                    <input type="text" class="form-control border-0 datetimepicker-input" placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -345,12 +332,12 @@ get_header();
 
 <!-- Team Start -->
 <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-primary text-uppercase">// Our Technicians //</h6>
-                <h1 class="mb-5">Our Expert Technicians</h1>
-            </div>
-            <div class="row g-4">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="text-primary text-uppercase">Our Technicians </h6>
+            <h1 class="mb-5">Our Expert Technicians</h1>
+        </div>
+        <div class="row g-4">
 
             <?php
 
@@ -359,44 +346,44 @@ get_header();
             $allTeam = mysqli_query($con, $select_qurry);
 
             while ($team = mysqli_fetch_assoc($allTeam)) {
-                
+
             ?>
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="admin/uploads/<?=$team['member_photo']?>" alt="">
+                            <img class="img-fluid" src="admin/uploads/<?= $team['member_photo'] ?>" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
-                                <a class="btn btn-square mx-1" href="<?=$team['member_facebook']?>"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href="<?=$team['member_twitter']?>"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href="<?=$team['member_instragram']?>"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square mx-1" href="<?= $team['member_facebook'] ?>"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square mx-1" href="<?= $team['member_twitter'] ?>"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href="<?= $team['member_instragram'] ?>"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0"><?=$team['member_name']?></h5>
-                            <small><?=$team['member_designation']?></small>
+                            <h5 class="fw-bold mb-0"><?= $team['member_name'] ?></h5>
+                            <small><?= $team['member_designation'] ?></small>
                         </div>
                     </div>
                 </div>
-              <?php
-                }
-                ?>
+            <?php
+            }
+            ?>
 
-            </div>
         </div>
     </div>
-    <!-- Team End -->
+</div>
+<!-- Team End -->
 
 
- <!-- Testimonial Start -->
- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="text-primary text-uppercase">// Testimonial //</h6>
-                <h1 class="mb-5">Our Clients Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                
+<!-- Testimonial Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h6 class="text-primary text-uppercase"> Testimonial </h6>
+            <h1 class="mb-5">Our Clients Say!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel position-relative">
+
             <?php
 
             $select_qurry = "SELECT * FROM `testimonial`";
@@ -404,24 +391,24 @@ get_header();
             $allTestimonial = mysqli_query($con, $select_qurry);
 
             while ($testimonial = mysqli_fetch_assoc($allTestimonial)) {
-                
+
             ?>
                 <div class="testimonial-item text-center">
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="admin/uploads/<?= $testimonial['client_photo']?>" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0"><?= $testimonial['client_name']?></h5>
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="admin/uploads/<?= $testimonial['client_photo'] ?>" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0"><?= $testimonial['client_name'] ?></h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><?= $testimonial['client_details']?></p>
+                        <p class="mb-0"><?= $testimonial['client_details'] ?></p>
                     </div>
                 </div>
 
-               <?php 
+            <?php
             }
-               ?>
-            </div>
+            ?>
         </div>
     </div>
-    <!-- Testimonial End -->
+</div>
+<!-- Testimonial End -->
 
 <?php
 get_footer();

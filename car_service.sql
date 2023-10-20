@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2023 at 05:59 AM
+-- Generation Time: Oct 20, 2023 at 12:15 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `carserv`
+-- Database: `car_service`
 --
 
 -- --------------------------------------------------------
@@ -42,9 +42,8 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`ban_id`, `ban_title`, `ban_subtitle`, `ban_button`, `ban_url`, `ban_image`, `ban_status`) VALUES
-(8, 'At officia magni ali', 'Laborum Enim incidu', 'Aliqua Tempora beat', 'Rem nesciunt non et', 'banner_1697531603_240836.jpg', 0),
-(9, 'Necessitatibus in la', 'Dolores sit nulla re', 'Deserunt officia dol', 'Ea consequatur volu', 'banner_1697531641_720849.jpg', 1),
-(10, 'adfasf', 'adfasdfas', 'sfasfasf', 'afdsafasdfa', 'banner_1697535473_168723.jpg', 0);
+(11, 'Ultimate Car Service Center', 'Your One-Stop Shop for Repairs, Maintenance, and More', 'Read More', 'https://www.youtube.com/watch?v=SbNwS1qXj1Q', 'banner_1697793520_644019.jpg', 0),
+(12, 'Drive with Confidence', 'Top-Quality Car Services Tailored to Your Needs', 'Read More', 'https://www.youtube.com/watch?v=oVTnSqRwqg8', 'banner_1697794083_286982.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -124,9 +123,10 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`service_id`, `service_title`, `service_details`, `service_button`, `service_url`, `service_photo`) VALUES
-(1, 'Repellendus Qui nos', 'Nobis elit quibusda', 'Culpa pariatur Aute', 'Nesciunt et quas na', 'service_1697686998_862753.JPG'),
-(2, 'Quibusdam pariatur ', 'Nihil nostrud nulla ', 'Ea voluptatum volupt', 'In vel non deserunt ', 'service_1697687005_995614.jpg'),
-(3, 'Voluptas culpa qui l', 'Facere excepteur duc', 'Assumenda nulla simi', 'Nostrum et eu reicie', 'service_1697687010_362210.jpg');
+(6, 'Diagnostic Test', 'Comprehensive vehicle diagnostics to pinpoint issues accurately. Thorough inspection of engine, electronics, and more. Get a detailed report on your cars health before any service.', 'Read More', 'https://www.youtube.com/watch?v=oVTnSqRwqg8', 'service_1697794826_292146.jpg'),
+(7, 'Engine Servicing', 'Expert engine maintenance, repair, and tuning for peak performance. Thorough inspection and replacement of worn components. Enhance fuel efficiency and extend engine lifespan with our professional service.', 'Read More', 'https://www.youtube.com/watch?v=oVTnSqRwqg8', 'service_1697795019_585165.jpg'),
+(8, 'Tires Replacement', 'Swift and safe tire replacement with a wide range of premium tire options. Professional balancing and alignment to ensure optimal handling. Drive away with confidence, knowing your vehicles grip and safety are restored.', 'Read More', 'https://www.youtube.com/watch?v=oVTnSqRwqg8', 'service_1697795085_507430.jpg'),
+(9, 'Oil Changing', 'Swift and convenient oil change using high-quality motor oils. Complete oil system inspection and filter replacement for engine longevity. Improve fuel efficiency and protect your engine with our routine oil change service.', 'Read More', 'https://www.youtube.com/watch?v=oVTnSqRwqg8', 'service_1697795182_109402.jpg');
 
 -- --------------------------------------------------------
 
@@ -149,9 +149,10 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`member_id`, `member_name`, `member_designation`, `member_facebook`, `member_twitter`, `member_instragram`, `member_photo`) VALUES
-(7, 'Shaine Cox', 'Exercitation itaque ', 'In anim ipsum eu eve', ' Qui provident venia', 'Esse non eligendi p', 'team_1697538847_713742.jpg'),
-(8, 'Octavius Levy', 'Necessitatibus sint ', 'Occaecat consequatur', ' Dolor unde ut fugit', 'Molestias tenetur qu', 'team_1697538861_300088.jpg'),
-(9, 'Jolie Wood', ' Dolores aliquip dese', 'fab fa-facebook-f', ' fab fa-twitter', 'fab fa-instagram', 'team_1697538872_759676.jpg');
+(10, 'Touhid', ' Service Technician', 'fab fa-facebook-f', ' fab fa-twitter', 'fab fa-instagram', 'team_1697795562_894237.jpg'),
+(11, 'Ahmed', 'Service Advisor', 'fab fa-facebook-f', ' fab fa-twitter', 'fab fa-instagram', 'team_1697795700_279340.jpg'),
+(12, 'Rashed', ' Parts Specialist', 'fab fa-facebook-f', ' fab fa-twitter', 'fab fa-instagram', 'team_1697795793_882609.jpg'),
+(13, 'Shium', 'Automotive Technician', 'fab fa-facebook-f', ' fab fa-twitter', 'fab fa-instagram', 'team_1697795891_260355.jpg');
 
 -- --------------------------------------------------------
 
@@ -172,9 +173,9 @@ CREATE TABLE `testimonial` (
 --
 
 INSERT INTO `testimonial` (`client_id`, `client_name`, `client_prof`, `client_details`, `client_photo`) VALUES
-(1, 'Isadora Garner', 'Dolore reiciendis ni', 'Maiores voluptatibus', 'testimonial_1697687920_645623.png'),
-(2, 'Kasimir Jacobs', 'Obcaecati nesciunt ', 'Quia aliquip provide', 'testimonial_1697687930_788135.jpg'),
-(3, 'Serina Heath', 'Voluptate sit aliqua', 'Ad vitae quis laboru', 'testimonial_1697687940_151640.JPG');
+(4, 'Takir Hasan ', ' IT Manager', 'I have been a loyal customer of XYZ Auto Service for years. Their expert team, led by Mark, always p', 'testimonial_1697796277_359839.jpg'),
+(5, 'Samia Kabir', 'Small Business Owner', 'As a small business owner, my vehicles are essential for my daily operations. ABC Car Care has been ', 'testimonial_1697796366_773436.jpg'),
+(6, 'Sadia Hossain', 'Teacher', 'I bring my car to DEF Auto Clinic regularly, and I couldnot be happier with their service. Being a t', 'testimonial_1697796449_362130.jpg');
 
 -- --------------------------------------------------------
 
@@ -199,7 +200,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_phone`, `user_email`, `user_username`, `user_password`, `role_id`, `user_photo`, `user_slug`) VALUES
-(7, 'Rehana Kabir Mim', '01680650424', 'rehanakabirmim@gmail.com', 'mim', '698d51a19d8a121ce581499d7b701668', 1, '', '  U652bbe92b1555');
+(7, 'Rehana Kabir Mim', '01680650424', 'rehanakabirmim@gmail.com', 'mim', 'c20ad4d76fe97759aa27a0c99bff6710', 1, '', '  U652bbe92b1555');
 
 --
 -- Indexes for dumped tables
@@ -264,7 +265,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `ban_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ban_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `booking`
@@ -288,19 +289,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `testimonial`
 --
 ALTER TABLE `testimonial`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`

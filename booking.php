@@ -79,8 +79,7 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn"
-                    data-wow-delay="0.6s">
+                <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
                     <h1 class="text-white mb-4">Book For A Service</h1>
                     <?php
                     if (!empty($_POST)) {
@@ -100,42 +99,34 @@ get_header();
                                 } else {
                                     echo "message send failed.";
                                 }
-
                             } else {
                                 echo "Please enter your email";
                             }
                         } else {
                             echo "Please enter your name";
                         }
-
                     }
 
                     ?>
                     <form action="" method="post">
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" name="name" placeholder="Your Name"
-                                    style="height: 55px;">
+                                <input type="text" class="form-control border-0" name="name" placeholder="Your Name" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" name="email" placeholder="Your Email"
-                                    style="height: 55px;">
+                                <input type="email" class="form-control border-0" name="email" placeholder="Your Email" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" name="service_name"
-                                    placeholder="Confirm Service Name" style="height: 55px;">
+                                <input type="text" class="form-control border-0" name="service_name" placeholder="Confirm Service Name" style="height: 55px;">
                             </div>
 
                             <div class="col-12 col-sm-6">
                                 <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="text" class="form-control border-0 datetimepicker-input"
-                                        name="service_date" placeholder="Service Date" data-target="#date1"
-                                        data-toggle="datetimepicker" style="height: 55px;">
+                                    <input type="text" class="form-control border-0 datetimepicker-input" name="service_date" placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
                                 </div>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-0" name="special_req"
-                                    placeholder="Special Request"></textarea>
+                                <textarea class="form-control border-0" name="special_req" placeholder="Special Request"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-secondary w-100 py-3" type="submit">Book Now</button>
