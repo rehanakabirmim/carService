@@ -4,7 +4,7 @@ $convert = explode('/', $_SERVER['PHP_SELF']); //string k array te convert kora 
 $page = $convert[2];
 $location='123 Street, Dhaka, Bangladesh';
 $time="Mon - Fri : 09.00 AM - 10.00 PM";
-$phone="+88 01680650424";
+$phone="+88 01795913294";
 ?>
 
 
@@ -72,10 +72,10 @@ $phone="+88 01680650424";
                     <small><?php echo($phone);?></small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/in/rehana-kabir-mim-63bb6623a/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>

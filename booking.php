@@ -34,7 +34,7 @@ get_header();
                     <i class="fa fa-certificate fa-3x text-primary flex-shrink-0"></i>
                     <div class="ps-4">
                         <h5 class="mb-3">Quality Servicing</h5>
-                        <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
+                        <p>The best quality is timely delivery at doorstep service. ACN motors in Madurai gives you best service at affordable costs.</p>
                         <a class="text-secondary border-bottom" href="">Read More</a>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ get_header();
                     <i class="fa fa-users-cog fa-3x text-primary flex-shrink-0"></i>
                     <div class="ps-4">
                         <h5 class="mb-3">Expert Workers</h5>
-                        <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
+                        <p>Diagnose, adjust, repair, or overhaul automotive vehicles. Test drive vehicles and test components and systems, using equipment such as infrared engine analyzers, compression gauges, and computerized diagnostic devices.</p>
                         <a class="text-secondary border-bottom" href="">Read More</a>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ get_header();
                     <i class="fa fa-tools fa-3x text-primary flex-shrink-0"></i>
                     <div class="ps-4">
                         <h5 class="mb-3">Modern Equipment</h5>
-                        <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
+                        <p>Features like air bags, seat belts, crumple zones, and a bevy of automated safety technologies have dramatically improved passenger safety — features that may be absent from a classic car, depending on how old it is.</p>
                         <a class="text-secondary border-bottom" href="">Read More</a>
                     </div>
                 </div>
